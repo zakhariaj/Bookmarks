@@ -1,0 +1,26 @@
+{ "browser_specific_settings": {
+    "gecko": {
+      "id": "your-add-on-name@your-domain.com"
+    }
+  }  
+    ,
+      "manifest_version": 2,
+      "name": "PDF_Inverter",
+      "version": "1.0",
+    
+      "description": "Inverts colors of webpages matching urls given below.",
+    
+      "icons": {
+        "48": "icons/border-48.png"
+      },
+    
+      "content_scripts": [
+        {
+          "matches": ["https://www.tml.cs.uni-tuebingen.de/teaching/2022_algorithmen/downloads_protected/vorlesung_main.pdf"],
+          "js":["reverse_pdf.js"],
+          "run_at": "document_start",
+          "all_frames": true
+        }
+      ]
+    }
+    

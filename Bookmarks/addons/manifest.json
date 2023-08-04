@@ -1,0 +1,54 @@
+{ "browser_specific_settings": {
+  "gecko": {
+    "id": "your-add-on-name@your-domain.com"
+  }
+}  
+  ,
+    "manifest_version": 2,
+    "name": "Inverter",
+    "version": "1.0",
+  
+    "description": "Inverts colors of webpages matching urls given below.",
+  
+    "icons": {
+      "52": "icons/Inverter.png"
+    },
+  
+    "content_scripts": [
+        {
+            "matches": [
+              "*://*.wikipedia.org/*",
+              "*://translate.google.com/*",
+              "*://addons.mozilla.org/*",
+              "*://*.chrome.com/*",
+              "*://*.stackexchange.com/*",
+              "*://*.paypal.com/*",
+              "*://*.desmos.com/*",
+              "*://platform.openai.com/*",
+              "https://wiki.ubuntuusers.de/*",
+              "https://askubuntu.com/*",
+              "https://*.arabdict.com/*",
+              "https://account.proton.me/login",
+              "https://*.live.com/*",
+              "https://auth0.openai.com/*",
+              "https://www.tml.cs.uni-tuebingen.de/*",
+              "https://alma.uni-tuebingen.de/*",
+              "https://ovidius.uni-tuebingen.de/*",
+              "https://www.sparkasse-essen.de/*",
+              "https://outlook.live.com/*",
+              "https://extensionworkshop.com/*",
+              "https://superuser.com/*",
+              "https://idp.uni-tuebingen.de/*",
+              "https://www.deepl.com/*",
+              "https://account.proton.me/switch",
+              "https://news.ycombinator.com/*",
+              "https://docs.python.org/*"
+            ],
+
+            "js": ["invert_colors.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ]
+  }
+  
